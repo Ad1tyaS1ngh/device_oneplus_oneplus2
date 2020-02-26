@@ -80,6 +80,9 @@ persist.dbg.wfc_avail_ovr=0
 # OEM Unlocking
 ro.oem_unlock_supported=1
 
+# Fastbootd
+ro.fastbootd.available=true
+
 # Media
 debug.stagefright.omx_default_rank.sw-audio=1
 debug.stagefright.omx_default_rank=0
