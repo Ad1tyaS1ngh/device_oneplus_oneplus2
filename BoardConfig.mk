@@ -23,7 +23,7 @@
 
 TARGET_OTA_ASSERT_DEVICE := OnePlus2,oneplus2
 
-PLATFORM_PATH := device/oneplus/oneplus2
+DEVICE_PATH := device/oneplus/oneplus2
 
 BOARD_VENDOR := oneplus
 
@@ -87,12 +87,12 @@ USE_CUSTOM_AUDIO_POLICY := 1
 USE_XML_AUDIO_POLICY_CONF := 1
 
 # Bluetooth
-BOARD_BLUETOOTH_BDROID_BUILDCFG_INCLUDE_DIR := $(PLATFORM_PATH)/bluetooth
+BOARD_BLUETOOTH_BDROID_BUILDCFG_INCLUDE_DIR := $(DEVICE_PATH)/bluetooth
 BOARD_HAVE_BLUETOOTH_QCOM := true
 QCOM_BT_USE_BTNV := true
 
 # Board
-TARGET_BOARD_INFO_FILE ?= $(PLATFORM_PATH)/board-info.txt
+TARGET_BOARD_INFO_FILE ?= $(DEVICE_PATH)/board-info.txt
 
 # Camera
 TARGET_PROCESS_SDK_VERSION_OVERRIDE := \
@@ -105,7 +105,7 @@ BOARD_CHARGER_DISABLE_INIT_BLANK := true
 TARGET_SCREEN_DENSITY := 480
 
 # Filesystem
-TARGET_FS_CONFIG_GEN := $(PLATFORM_PATH)/configs/config.fs
+TARGET_FS_CONFIG_GEN := $(DEVICE_PATH)/configs/config.fs
 
 # Graphics
 TARGET_ADDITIONAL_GRALLOC_10_USAGE_BITS := 0x02000000U
@@ -116,11 +116,11 @@ TARGET_USES_HWC2 := true
 OVERRIDE_RS_DRIVER := libRSDriver_adreno.so
 
 # HIDL
-DEVICE_MANIFEST_FILE := $(PLATFORM_PATH)/configs/hidl/manifest.xml
-DEVICE_MATRIX_FILE := $(PLATFORM_PATH)/configs/hidl/compatibility_matrix.xml
+DEVICE_MANIFEST_FILE := $(DEVICE_PATH)/configs/hidl/manifest.xml
+DEVICE_MATRIX_FILE := $(DEVICE_PATH)/configs/hidl/compatibility_matrix.xml
 
 # Include path
-TARGET_SPECIFIC_HEADER_PATH := $(PLATFORM_PATH)/include
+TARGET_SPECIFIC_HEADER_PATH := $(DEVICE_PATH)/include
 
 # Init
 TARGET_INIT_VENDOR_LIB := libinit_oneplus2
@@ -152,11 +152,11 @@ BOARD_USES_QCOM_HARDWARE := true
 
 # Releasetools
 TARGET_RECOVERY_UPDATER_LIBS := librecovery_updater_oneplus2
-TARGET_RELEASETOOLS_EXTENSIONS := $(PLATFORM_PATH)
+TARGET_RELEASETOOLS_EXTENSIONS := $(DEVICE_PATH)
 
 # SELinux
 include device/qcom/sepolicy-legacy/sepolicy.mk
-BOARD_SEPOLICY_DIRS += $(PLATFORM_PATH)/sepolicy
+BOARD_SEPOLICY_DIRS += $(DEVICE_PATH)/sepolicy
 
 # Shims
 TARGET_LD_SHIM_LIBS := \
@@ -186,7 +186,7 @@ endif
 WITH_DEXPREOPT_BOOT_IMG_AND_SYSTEM_SERVER_ONLY ?= true
 
 # Recovery
-TARGET_RECOVERY_FSTAB := $(PLATFORM_PATH)/rootdir/etc/fstab.qcom
+TARGET_RECOVERY_FSTAB := $(DEVICE_PATH)/rootdir/etc/fstab.qcom
 
 # inherit from the proprietary version
 include vendor/oneplus/oneplus2/BoardConfigVendor.mk
