@@ -105,7 +105,7 @@ BOARD_CHARGER_DISABLE_INIT_BLANK := true
 TARGET_SCREEN_DENSITY := 480
 
 # Filesystem
-TARGET_FS_CONFIG_GEN := $(PLATFORM_PATH)/config.fs
+TARGET_FS_CONFIG_GEN := $(PLATFORM_PATH)/configs/config.fs
 
 # Graphics
 TARGET_ADDITIONAL_GRALLOC_10_USAGE_BITS := 0x02000000U
@@ -116,8 +116,8 @@ TARGET_USES_HWC2 := true
 OVERRIDE_RS_DRIVER := libRSDriver_adreno.so
 
 # HIDL
-DEVICE_MANIFEST_FILE := $(PLATFORM_PATH)/manifest.xml
-DEVICE_MATRIX_FILE := $(PLATFORM_PATH)/compatibility_matrix.xml
+DEVICE_MANIFEST_FILE := $(PLATFORM_PATH)/configs/hidl/manifest.xml
+DEVICE_MATRIX_FILE := $(PLATFORM_PATH)/configs/hidl/compatibility_matrix.xml
 
 # Include path
 TARGET_SPECIFIC_HEADER_PATH := $(PLATFORM_PATH)/include
