@@ -402,9 +402,6 @@ vendor/lib64/libqmi_encdec.so
 -vendor/lib64/libqmiservices.so
 vendor/lib64/libsmemlog.so
 
-# QMI - from OnePlus 2 OxygenOS 3.6.0 (modified)
-etc/permissions/qti_libpermissions.xml|ef3c88495f2f61a2d16e1445113a9d80f8db0e0a
-
 # Radio
 bin/qmuxd:vendor/bin/qmuxd
 bin/rfs_access:vendor/bin/rfs_access
