@@ -72,6 +72,11 @@ persist.metadata_dynfps.disable=true
 ro.opengles.version=196610
 ro.qualcomm.cabl=0
 
+# IMS
+persist.dbg.volte_avail_ovr=1
+persist.dbg.vt_avail_ovr=0
+persist.dbg.wfc_avail_ovr=0
+
 # OEM Unlocking
 ro.oem_unlock_supported=1
 
