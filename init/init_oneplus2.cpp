@@ -102,11 +102,6 @@ void vendor_load_properties() {
         LOG(ERROR) << __func__ << ": unexcepted rf version!";
     }
 
-    property_override("ro.build.product", "OnePlus2");
-    for (const auto &source : ro_product_props_default_source_order) {
-        set_ro_product_prop(source, "device", "OnePlus2");
-    }
-
     /* Dalvik props */
     sysinfo(&sys);
     if (sys.totalram > 3072ull * 1024 * 1024) {
