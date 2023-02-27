@@ -261,16 +261,19 @@ PRODUCT_COPY_FILES += \
 # Ramdisk
 PRODUCT_PACKAGES += \
     fstab.qcom \
+    init.qcom.power.rc \
+    init.qcom.rc \
+    init.qcom.usb.rc \
+    init.recovery.qcom.rc \
+    ueventd.qcom.rc
+
+PRODUCT_PACKAGES += \
     init.oneplus2.power.sh \
     init.program_bdaddr.sh \
     init.qcom.bt.sh \
-    init.qcom.power.rc \
-    init.qcom.rc \
     init.qcom.sh \
-    init.qcom.usb.rc \
     init.qcom.usb.sh \
-    init.recovery.qcom.rc \
-    ueventd.qcom.rc
+    init.tfa.sh
 
 # Recovery
 PRODUCT_PACKAGES += \
@@ -297,7 +300,6 @@ PRODUCT_COPY_FILES += \
 
 # TFA calibration
 PRODUCT_PACKAGES += \
-    init.tfa.sh \
     tinyplay
 
 # TimeKeep
