@@ -5,7 +5,6 @@ LOCAL_SRC_FILES := timekeep.c
 LOCAL_MODULE := timekeep
 LOCAL_SHARED_LIBRARIES := libcutils liblog
 LOCAL_MODULE_TAGS := optional
-LOCAL_CFLAGS := -DANDROID_SDK_VERSION=$(PLATFORM_SDK_VERSION)
 LOCAL_MODULE_OWNER := sony
 LOCAL_INIT_RC      := vendor/etc/init/timekeep.rc
 LOCAL_PROPRIETARY_MODULE := true
