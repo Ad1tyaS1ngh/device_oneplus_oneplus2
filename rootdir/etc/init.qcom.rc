@@ -432,13 +432,13 @@ service energy-awareness /vendor/bin/energy-awareness
     group system
     oneshot
 
-service imsqmidaemon /system/vendor/bin/imsqmidaemon
+service imsqmidaemon /vendor/bin/imsqmidaemon
     class main
     user radio
     socket ims_qmid stream 0660 system radio
     group radio log diag
 
-service imsdatadaemon /system/vendor/bin/imsdatadaemon
+service imsdatadaemon /vendor/bin/imsdatadaemon
     class main
     user radio
     socket ims_datad stream 0660 system radio

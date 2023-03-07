@@ -97,7 +97,7 @@ TARGET_BOARD_INFO_FILE ?= $(DEVICE_PATH)/board-info.txt
 
 # Camera
 TARGET_PROCESS_SDK_VERSION_OVERRIDE := \
-    /system/vendor/bin/mm-qcamera-daemon=22
+    /vendor/bin/mm-qcamera-daemon=22
 
 # Charger
 BOARD_CHARGER_DISABLE_INIT_BLANK := true
@@ -174,10 +174,10 @@ BOARD_SEPOLICY_DIRS += $(DEVICE_PATH)/sepolicy/vendor
 
 # Shims
 TARGET_LD_SHIM_LIBS := \
-    /system/vendor/lib/libmmcamera2_stats_algorithm.so|libshim_atomic.so \
-    /system/vendor/lib64/lib-imsvt.so|libshims_ims.so \
-    /system/vendor/lib64/lib-imsdpl.so|libshims_boringssl.so \
-    /system/vendor/lib64/libril-qc-qmi-1.so|rild_socket.so
+    /vendor/lib/libmmcamera2_stats_algorithm.so|libshim_atomic.so \
+    /vendor/lib64/lib-imsvt.so|libshims_ims.so \
+    /vendor/lib64/lib-imsdpl.so|libshims_boringssl.so \
+    /vendor/lib64/libril-qc-qmi-1.so|rild_socket.so
 
 # Wifi
 BOARD_HAS_QCOM_WLAN := true
