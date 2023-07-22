@@ -105,12 +105,20 @@ void vendor_load_properties() {
     /* Dalvik props */
     sysinfo(&sys);
     if (sys.totalram > 3072ull * 1024 * 1024) {
-        /* Values for 4GB RAM vatiants */
-        property_set("dalvik.vm.heapgrowthlimit", "288m");
-        property_set("dalvik.vm.heapsize", "768m");
-    } else {
-        /* Values for 3GB RAM vatiants */
+        // from - phone-xxhdpi-4096-dalvik-heap.mk
+        property_set("dalvik.vm.heapstartsize", "8m");
         property_set("dalvik.vm.heapgrowthlimit", "192m");
         property_set("dalvik.vm.heapsize", "512m");
+        property_set("dalvik.vm.heaptargetutilization", "0.6");
+        property_set("dalvik.vm.heapminfree", "8m");
+        property_set("dalvik.vm.heapmaxfree", "16m");
+    } else {
+        // from - phone-xhdpi-2048-dalvik-heap.mk
+        property_set("dalvik.vm.heapstartsize", "8m");
+        property_set("dalvik.vm.heapgrowthlimit", "192m");
+        property_set("dalvik.vm.heapsize", "512m");
+        property_set("dalvik.vm.heaptargetutilization", "0.75");
+        property_set("dalvik.vm.heapminfree", "512k");
+        property_set("dalvik.vm.heapmaxfree", "8m");
     }
 }
