@@ -1,0 +1,24 @@
+android_app {
+    name: "TimeKeep",
+    srcs: ["src/**/*.java"],
+    certificate: "platform",
+    platform_apis: true,
+    privileged: true,
+    proguard: {
+        disabled: true,
+    },
+}
+
+cc_binary {
+    name: "timekeep",
+    srcs: ["timekeep.c"],
+    shared_libs: ["libcutils", "liblog"],
+    required: ["timekeep.rc"],
+}
+
+prebuilt_etc {
+    name: "timekeep.rc",
+    src: "timekeep.rc",
+    sub_dir: "init",
+    vendor: true,
+}
