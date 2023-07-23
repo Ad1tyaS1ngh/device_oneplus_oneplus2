@@ -165,6 +165,9 @@ TARGET_LD_SHIM_LIBS := \
     /system/vendor/lib64/lib-imsdpl.so|libshims_boringssl.so \
     /system/vendor/lib64/libril-qc-qmi-1.so|rild_socket.so
 
+# Vendor security patch level
+VENDOR_SECURITY_PATCH := 2017-10-01
+
 # Wifi
 BOARD_HAS_QCOM_WLAN := true
 BOARD_WLAN_DEVICE := qcwcn
