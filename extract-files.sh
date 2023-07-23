@@ -56,16 +56,16 @@ fi
 function blob_fixup() {
     case "${1}" in
         vendor/lib/libmmcamera2_stats_algorithm.so)
-            "${PATCHELF}" --add-needed "libshim_atomic.so" "${2}"
+            grep -q "libshim_atomic.so" "${2}" || "${PATCHELF}" --add-needed "libshim_atomic.so" "${2}"
             ;;
         vendor/lib64/lib-imsvt.so)
-            "${PATCHELF}" --add-needed "libshims_ims.so" "${2}"
+            grep -q "libshims_ims.so" "${2}" || "${PATCHELF}" --add-needed "libshims_ims.so" "${2}"
             ;;
         vendor/lib64/lib-imsdpl.so)
-            "${PATCHELF}" --add-needed "libshims_boringssl.so" "${2}"
+            grep -q "libshims_boringssl.so" "${2}" || "${PATCHELF}" --add-needed "libshims_boringssl.so" "${2}"
             ;;
         vendor/lib64/libril-qc-qmi-1.so)
-            "${PATCHELF}" --add-needed "rild_socket.so" "${2}"
+            grep -q "rild_socket.so" "${2}" || "${PATCHELF}" --add-needed "rild_socket.so" "${2}"
             ;;
     esac
 }
